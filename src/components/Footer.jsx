@@ -6,7 +6,7 @@ import { FaTwitter } from 'react-icons/fa6';
 import { FaTiktok } from 'react-icons/fa6';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
-import FooterNav from './FooterNav';
+// import FooterNav from './FooterNav';
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
         <div className={styles['left-col']}>
           <img className={styles.logo} src={logo} alt="" />
           <div className={styles['icons-wrapper']}>
-            <IconaContext.Provider value={{ size: 28 }}>
+            <IconContext.Provider value={{ size: 28 }}>
               <Link to="/">
                 <FaInstagram />
               </Link>
@@ -28,12 +28,10 @@ const Footer = () => {
               <Link to="/">
                 <FaTiktok />
               </Link>
-            </IconaContext.Provider>
+            </IconContext.Provider>
           </div>
         </div>
-        <div className={styles['right-col']}>
-          <FooterNav />
-        </div>
+        <div className={styles['right-col']}>{/* <FooterNav /> */}</div>
       </div>
       <p className={styles.copy}>&copy; Belko2k</p>
     </footer>
