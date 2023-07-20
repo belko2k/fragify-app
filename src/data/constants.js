@@ -1,4 +1,5 @@
-import dhi from './assets/fragrances/mens/dior_homme_int.png';
+import dhi from '../assets/fragrances/mens/dior_homme_int.png';
+import LaVieEstBelle from '../assets/fragrances/womens/la_vie_est_belle.png';
 
 export const men = [
     {
@@ -34,7 +35,7 @@ export const women = [
         id: 'la_vie_est_belle',
         name: 'La Vie Est Belle',
         brand: 'Lancôme',
-        image: dhi,
+        image: LaVieEstBelle,
         notes: {
             top: [ "Black Currant", "Pear" ],
             middle: [ "Iris", "Jasmine", "Orange Blossom" ],
@@ -61,3 +62,5 @@ export const women = [
         ]
     }
 ];
+
+export const allFragrances = [ ...men, ...women ];
