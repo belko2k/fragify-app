@@ -21,8 +21,8 @@ function App() {
 
         <Route path="/fragrances" element={<FragLayout />}>
           <Route index element={<FragGallery />} />
-          <Route path="men" element={<FragGallery />} />
-          <Route path="women" element={<FragGallery />} />
+          {/* <Route path="men" element={<FragGallery />} />
+          <Route path="women" element={<FragGallery />} /> */}
         </Route>
       </Route>
     )

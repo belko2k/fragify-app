@@ -1,0 +1,45 @@
+.card {
+  display: grid;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.card img {
+  height: 330px;
+  justify-self: center;
+}
+
+.details {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.brand {
+  opacity: 0.7;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-elevation-medium);
+}
