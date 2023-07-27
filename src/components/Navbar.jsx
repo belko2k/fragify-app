@@ -6,8 +6,8 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <NavLink to="/">Home</NavLink>
       <NavLink to="fragrances">Fragrances</NavLink>
-      {/* <NavLink to="fragrances/men">Men&apos;s </NavLink>
-      <NavLink to="fragrances/women">Women&apos;s</NavLink> */}
+      <NavLink to="fragrances/men">Men&apos;s </NavLink>
+      <NavLink to="fragrances/women">Women&apos;s</NavLink>
     </nav>
   );
 };
