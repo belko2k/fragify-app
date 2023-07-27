@@ -4,9 +4,10 @@ import { allFragrances } from '../data/constants';
 import { men } from '../data/constants';
 import { women } from '../data/constants';
 import style from '../styles/FragGallery.module.css';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
+import Breadcrumbs from '../components/Breadcrumbs';
 
-const FragGallery = ({ categoryType }) => {
+const FragGallery = ({ categoryType, title }) => {
   const [category, setCategory] = useState(allFragrances);
 
   useEffect(() => {
@@ -30,6 +31,8 @@ const FragGallery = ({ categoryType }) => {
 
   return (
     <div>
+      <div className={style.banner}>{title}</div>
+      <Breadcrumbs />
       <div className={style.grid}>
         {category.map((frag) => {
           return (
@@ -51,6 +54,7 @@ const FragGallery = ({ categoryType }) => {
 
 FragGallery.propTypes = {
   categoryType: PropTypes.oneOf(['allFragrances', 'men', 'women']).isRequired,
+  title: string,
 };
 
 export default FragGallery;
