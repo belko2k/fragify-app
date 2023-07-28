@@ -4,7 +4,6 @@ import { allFragrances } from '../data/constants';
 import { men } from '../data/constants';
 import { women } from '../data/constants';
 import style from '../styles/FragGallery.module.css';
-import PropTypes, { string } from 'prop-types';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const FragGallery = ({ categoryType, title }) => {
@@ -50,13 +49,6 @@ const FragGallery = ({ categoryType, title }) => {
       </div>
     </div>
   );
-};
-
-//props
-
-FragGallery.propTypes = {
-  categoryType: PropTypes.oneOf(['allFragrances', 'men', 'women']).isRequired,
-  title: string,
 };
 
 export default FragGallery;

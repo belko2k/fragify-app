@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/FragCard.module.css';
-import PropTypes from 'prop-types';
 
 const FragCard = ({ id, image, brand, name, prices }) => {
   return (
@@ -17,19 +16,6 @@ const FragCard = ({ id, image, brand, name, prices }) => {
       </div>
     </Link>
   );
-};
-
-FragCard.propTypes = {
-  id: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  prices: PropTypes.arrayOf(
-    PropTypes.shape({
-      bottle_size: PropTypes.string,
-      price: PropTypes.number,
-    }).isRequired
-  ).isRequired,
 };
 
 export default FragCard;
