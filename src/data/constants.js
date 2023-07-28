@@ -12,6 +12,7 @@ export const men = [
         name: 'Dior Homme Intense',
         brand: 'Dior',
         image: dhi,
+        gender: "men",
         notes: {
             top: [ "Lavender" ],
             middle: [ "Iris", "Ambrette Seed", "Pear" ],
@@ -38,6 +39,7 @@ export const men = [
         name: "L'Homme",
         brand: 'YSL',
         image: ysl_lhomme,
+        gender: "men",
         notes: {
             top: [ "Ginger", "Bergamot", "Lemon" ],
             middle: [ "Spices", "Violet Leaf", "White Pepper", "Basil" ],
@@ -68,6 +70,7 @@ export const men = [
         name: "Light Blue Eau Intense",
         brand: 'Dolce&Gabbana',
         image: light_blue_int,
+        gender: "men",
         notes: {
             top: [ "Grapefruit", "Mandarin Orange" ],
             middle: [ "Sea water", "Juniper" ],
@@ -97,6 +100,7 @@ export const women = [
         name: 'La Vie Est Belle',
         brand: 'Lancôme',
         image: LaVieEstBelle,
+        gender: "women",
         notes: {
             top: [ "Black Currant", "Pear" ],
             middle: [ "Iris", "Jasmine", "Orange Blossom" ],
@@ -127,6 +131,7 @@ export const women = [
         name: 'Good Girl ',
         brand: 'Carolina Herrera',
         image: ch_good_girl,
+        gender: "women",
         notes: {
             top: [ "Almond" ],
             middle: [ "Tuberose", "Jasmine Sambac" ],

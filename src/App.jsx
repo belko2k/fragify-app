@@ -36,7 +36,11 @@ function App() {
           />
         </Route>
 
-        <Route element={<FragDetailsLayout />}></Route>
+        <Route element={<FragDetailsLayout />}>
+          <Route path="fragrances/men/:id" element={<FragDetails />} />
+
+          <Route path="fragrances/women/:id" element={<FragDetails />} />
+        </Route>
       </Route>
     )
   );

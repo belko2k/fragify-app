@@ -35,15 +35,7 @@ const FragGallery = ({ categoryType, title }) => {
         <Breadcrumbs />
         <div className={style.grid}>
           {category.map((frag) => {
-            return (
-              <FragCard
-                key={frag.id}
-                brand={frag.brand}
-                name={frag.name}
-                prices={frag.prices}
-                image={frag.image}
-              />
-            );
+            return <FragCard key={frag.id} content={frag} />;
           })}
         </div>
       </div>

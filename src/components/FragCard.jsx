@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/FragCard.module.css';
 
-const FragCard = ({ id, image, brand, name, prices }) => {
+const FragCard = (props) => {
+  const { content } = props;
+
   return (
-    <Link to={id} key={id}>
+    <Link to={`/fragrances/${content.gender}/${content.id}`}>
       <div className={styles['card']}>
-        <img src={image} />
+        <img src={content.image} />
         <div className={styles['details']}>
-          <p className={styles.brand}>{brand}</p>
-          <p className={styles.name}>{name}</p>
+          <p className={styles.brand}>{content.brand}</p>
+          <p className={styles.name}>{content.name}</p>
           <div className={styles.price}>
-            {prices[0].price.toFixed(2).replace('.', ',')}€
+            {content.prices[0].price.toFixed(2).replace('.', ',')}€
           </div>
         </div>
       </div>
