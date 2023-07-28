@@ -19,7 +19,7 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
 
-        <Route path="/fragrances" element={<FragLayout />}>
+        <Route path="fragrances" element={<FragLayout />}>
           <Route
             index
             element={<FragGallery categoryType="allFragrances" title="All" />}

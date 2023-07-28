@@ -1,6 +1,9 @@
+/* Navbar.module.css */
+
 .navbar {
   display: flex;
   gap: 3rem;
+  padding: 0.5rem;
 }
 
 .navbar a {
@@ -10,7 +13,8 @@
   font-family: 'Cinzel', serif;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   border-bottom: 1px solid black;
   margin-top: -1px;
 }

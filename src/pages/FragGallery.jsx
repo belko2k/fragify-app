@@ -32,19 +32,21 @@ const FragGallery = ({ categoryType, title }) => {
   return (
     <div>
       <div className={style.banner}>{title}</div>
-      <Breadcrumbs />
-      <div className={style.grid}>
-        {category.map((frag) => {
-          return (
-            <FragCard
-              key={frag.id}
-              brand={frag.brand}
-              name={frag.name}
-              prices={frag.prices}
-              image={frag.image}
-            />
-          );
-        })}
+      <div className={style.wrapper}>
+        <Breadcrumbs />
+        <div className={style.grid}>
+          {category.map((frag) => {
+            return (
+              <FragCard
+                key={frag.id}
+                brand={frag.brand}
+                name={frag.name}
+                prices={frag.prices}
+                image={frag.image}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,13 @@
+.wrapper {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
 .grid {
   padding: 4rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(239px, 1fr));
   gap: 5rem;
-  max-width: 1440px;
-  margin-inline: auto;
 }
 
 .banner {
