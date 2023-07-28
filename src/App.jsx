@@ -14,6 +14,7 @@ import FragDetailsLayout from './layouts/FragDetailsLayout';
 import Home from './pages/Home';
 import FragGallery from './pages/FragGallery';
 import FragDetails from './pages/FragDetails';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   const router = createBrowserRouter(
@@ -41,6 +42,8 @@ function App() {
 
           <Route path="fragrances/women/:id" element={<FragDetails />} />
         </Route>
+
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     )
   );

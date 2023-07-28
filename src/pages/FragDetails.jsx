@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import { allFragrances } from '../data/constants';
 
 const FragDetails = () => {
   const { id } = useParams();
