@@ -7,11 +7,13 @@ import {
 
 //layouts
 import RootLayout from './layouts/RootLayout';
+import FragLayout from './layouts/FragLayout';
+import FragDetailsLayout from './layouts/FragDetailsLayout';
 
 //pages
 import Home from './pages/Home';
-import FragLayout from './layouts/FragLayout';
 import FragGallery from './pages/FragGallery';
+import FragDetails from './pages/FragDetails';
 
 function App() {
   const router = createBrowserRouter(
@@ -33,6 +35,8 @@ function App() {
             element={<FragGallery categoryType="women" title="For Her" />}
           />
         </Route>
+
+        <Route element={<FragDetailsLayout />}></Route>
       </Route>
     )
   );

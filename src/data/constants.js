@@ -1,6 +1,7 @@
 //men
 import dhi from '../assets/fragrances/mens/dior_homme_int.png';
 import ysl_lhomme from '../assets/fragrances/mens/ysl_lhomme.png';
+import light_blue_int from '../assets/fragrances/mens/light_blue_int.png';
 //women
 import LaVieEstBelle from '../assets/fragrances/womens/la_vie_est_belle.png';
 import ch_good_girl from '../assets/fragrances/womens/ch_gg.png';
@@ -58,6 +59,32 @@ export const men = [
             },
             {
                 bottle_size: "150ml",
+                price: 164.0
+            }
+        ]
+    },
+    {
+        id: 'light_blue_eau_intense',
+        name: "Light Blue Eau Intense",
+        brand: 'Dolce&Gabbana',
+        image: light_blue_int,
+        notes: {
+            top: [ "Grapefruit", "Mandarin Orange" ],
+            middle: [ "Sea water", "Juniper" ],
+            base: [ "Musk", "Amberwood" ]
+        },
+        perfumers: [ "Alberto Morillas" ],
+        prices: [
+            {
+                bottle_size: "50ml",
+                price: 75.0
+            },
+            {
+                bottle_size: "100ml",
+                price: 102.0
+            },
+            {
+                bottle_size: "200ml",
                 price: 164.0
             }
         ]
