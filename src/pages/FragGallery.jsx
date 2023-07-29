@@ -28,6 +28,10 @@ const FragGallery = ({ categoryType, title }) => {
     }
   }, [categoryType]);
 
+  useEffect(() => {
+    document.title = `${categoryType} | Fragify`;
+  }, [categoryType]);
+
   return (
     <div>
       <div className={style.banner}>{title}</div>
