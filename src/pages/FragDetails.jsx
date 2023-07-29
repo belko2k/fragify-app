@@ -20,8 +20,8 @@ const FragDetails = () => {
   }, [id]);
 
   useEffect(() => {
-    document.title = `${frag.name} | Fragify`;
-  }, [frag.name]);
+    document.title = `${frag.name} | ${frag.brand} | Fragify`;
+  }, [frag.name, frag.brand]);
 
   return (
     <div>
