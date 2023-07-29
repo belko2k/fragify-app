@@ -5,7 +5,7 @@ import styles from '../styles/Hero.module.css';
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <Link to="/">
+      <Link to="/fragrances/men/dior_homme_intense">
         <img className={styles.img} src={banner} alt="dior homme intense" />
       </Link>
     </section>
