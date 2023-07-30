@@ -10,6 +10,10 @@
     5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
+html {
+  height: 100%;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */

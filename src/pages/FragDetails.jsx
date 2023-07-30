@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { allFragrances } from '../data/constants';
+import style from '../styles/FragDetails.module.css';
 
 const emptyFrag = {
   id: '',
@@ -38,23 +39,27 @@ const FragDetails = () => {
   console.log(clickedButtonValue);
 
   return (
-    <div>
-      <div className="left-col">
-        <img src={frag.image} alt={frag.name} />
+    <div className={style['even-columns']}>
+      <div className={style['left-col']}>
+        <img className={style['frag-img']} src={frag.image} alt={frag.name} />
       </div>
-      <div className="right-col">
-        <p>{frag.brand}</p>
-        <p>{frag.name}</p>
-        <p>€{clickedButtonValue}</p>
-        {frag.prices.map((price) => (
-          <button
-            key={price.bottle_size}
-            value={price.price}
-            onClick={handleButtonClick}
-          >
-            {price.bottle_size}
-          </button>
-        ))}
+      <div className={style['right-col']}>
+        <p className={style.brand}>{frag.brand}</p>
+        <p className={style.name}>{frag.name}</p>
+        <hr />
+        <p className={style.price}>€{clickedButtonValue}</p>
+        <div className={style['btn-wrapper']}>
+          {frag.prices.map((price) => (
+            <button
+              className={style.btn}
+              key={price.bottle_size}
+              value={price.price}
+              onClick={handleButtonClick}
+            >
+              {price.bottle_size}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

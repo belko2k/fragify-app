@@ -1,0 +1,64 @@
+.even-columns {
+  display: flex;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 4rem 3rem;
+  gap: 10rem;
+  place-content: center;
+}
+
+.left-col {
+  justify-self: center;
+}
+
+.frag-img {
+  max-width: 380px;
+  max-height: 450px;
+}
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+.name {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  border: 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  background-color: #c9bcbc;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  outline: 2px solid black;
+  background-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .even-columns {
+    gap: 5rem;
+  }
+}
