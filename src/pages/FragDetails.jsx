@@ -36,8 +36,6 @@ const FragDetails = () => {
     setClickedButtonValue(value);
   };
 
-  console.log(clickedButtonValue);
-
   return (
     <div className={style['even-columns']}>
       <div className={style['left-col']}>

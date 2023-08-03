@@ -2,6 +2,7 @@
 import dhi from '../assets/fragrances/mens/dior_homme_int.png';
 import ysl_lhomme from '../assets/fragrances/mens/ysl_lhomme.png';
 import light_blue_int from '../assets/fragrances/mens/light_blue_int.png';
+import ahs from '../assets/fragrances/mens/ahs.png';
 //women
 import LaVieEstBelle from '../assets/fragrances/womens/la_vie_est_belle.png';
 import ch_good_girl from '../assets/fragrances/womens/ch_gg.png';
@@ -66,7 +67,7 @@ export const men = [
         ]
     },
     {
-        id: 'light_blue_eau_intense',
+        id: 'd&g_light_blue_eau_intense',
         name: "Light Blue Eau Intense",
         brand: 'Dolce&Gabbana',
         image: light_blue_int,
@@ -91,8 +92,37 @@ export const men = [
                 price: 164.0
             }
         ]
+    },
+    {
+        id: 'chanel_allure_homme_sport',
+        name: "Allure Home Sport",
+        brand: 'Chanel',
+        image: ahs,
+        gender: "men",
+        notes: {
+            top: [ "Orange", "Sea Notes", "Mandarin", "Aldehydes" ],
+            middle: [ "Pepper", "Cedar", "Neroli" ],
+            base: [ "White Musk", "Amber", "Tonka Bean", "Vanilla", "Vetiver" ]
+        },
+        perfumers: [ "Jacques Polge" ],
+        prices: [
+            {
+                bottle_size: "50ml",
+                price: 86.0
+            },
+            {
+                bottle_size: "100ml",
+                price: 121.0
+            },
+            {
+                bottle_size: "150ml",
+                price: 145.0
+            }
+        ]
     }
 ];
+
+//WOMEN
 
 export const women = [
     {

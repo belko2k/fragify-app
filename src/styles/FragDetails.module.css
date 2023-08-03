@@ -1,5 +1,6 @@
 .even-columns {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   max-width: 1440px;
   margin-inline: auto;
   padding: 4rem 3rem;
@@ -37,8 +38,14 @@
   margin-top: 1rem;
 }
 
+.price::before {
+  display: block;
+  content: 'From';
+}
+
 .btn-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -47,12 +54,13 @@
   border: 0;
   padding: 0.5rem 0.7rem;
   border-radius: 8px;
-  background-color: #c9bcbc;
+  background-color: #d7cfcf;
   letter-spacing: 1.5px;
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   outline: 2px solid black;
   background-color: #fff;
 }
