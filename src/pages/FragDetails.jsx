@@ -60,7 +60,8 @@ const FragDetails = () => {
               value={price.price}
               onClick={handleButtonClick}
             >
-              {price.bottle_size}
+              <span>{price.bottle_size}</span>
+              <span>€{price.price}</span>
             </button>
           ))}
         </div>
