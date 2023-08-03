@@ -38,11 +38,6 @@
   margin-top: 1rem;
 }
 
-.price::before {
-  display: block;
-  content: 'From';
-}
-
 .btn-wrapper {
   display: flex;
   flex-wrap: wrap;
