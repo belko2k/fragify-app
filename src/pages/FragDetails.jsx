@@ -65,7 +65,6 @@ const FragDetails = () => {
             </button>
           ))}
         </div>
-
         <FragAccordion frag={frag} style={style} />
       </div>
     </div>
