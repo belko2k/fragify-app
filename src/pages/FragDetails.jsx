@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { allFragrances } from '../data/constants';
 import style from '../styles/FragDetails.module.css';
 import FragAccordion from '../components/FragAccordion';
+import { Button } from '@chakra-ui/react';
+import { FaCartShopping } from 'react-icons/fa6';
 
 const emptyFrag = {
   id: '',
@@ -63,6 +65,10 @@ const FragDetails = () => {
             </button>
           ))}
         </div>
+
+        <Button colorScheme="gray" leftIcon={<FaCartShopping />}>
+          Add to cart
+        </Button>
 
         <FragAccordion frag={frag} style={style} />
       </div>
