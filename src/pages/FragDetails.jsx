@@ -21,14 +21,14 @@ const emptyFrag = {
 const FragDetails = () => {
   const { id } = useParams();
   const [frag, setFrag] = useState(emptyFrag);
-  const [clickedButtonValue, setClickedButtonValue] = useState();
+  const [clickedButtonIndex, setClickedButtonIndex] = useState(0);
 
   useEffect(() => {
     const target = allFragrances.find((p) => p.id === id);
     setFrag(() => target || emptyFrag);
 
     if (target && target.prices.length > 0) {
-      setClickedButtonValue(target.prices[0].price);
+      setClickedButtonIndex(0);
     }
   }, [id]);
 
@@ -36,9 +36,8 @@ const FragDetails = () => {
     document.title = `${frag.name} | ${frag.brand} | Fragify`;
   }, [frag.name, frag.brand]);
 
-  const handleButtonClick = (e) => {
-    const value = e.target.value;
-    setClickedButtonValue(value);
+  const handleButtonClick = (index) => {
+    setClickedButtonIndex(index);
   };
 
   return (
@@ -50,21 +49,21 @@ const FragDetails = () => {
         <p className={style.brand}>{frag.brand}</p>
         <p className={style.name}>{frag.name}</p>
         <hr />
-        <p className={style.price}>€{clickedButtonValue}</p>
+        <p className={style.price}>€{frag.prices[clickedButtonIndex]?.price}</p>
         <hr />
         <div className={style['btn-wrapper']}>
-          {frag.prices.map((price) => (
+          {frag.prices.map((price, index) => (
             <button
               className={style.btn}
               key={price.bottle_size}
-              value={price.price}
-              onClick={handleButtonClick}
+              onClick={() => handleButtonClick(index)}
             >
               <span>{price.bottle_size}</span>
               <span>€{price.price}</span>
             </button>
           ))}
         </div>
+
         <FragAccordion frag={frag} style={style} />
       </div>
     </div>
