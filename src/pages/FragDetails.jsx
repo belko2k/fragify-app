@@ -52,7 +52,7 @@ const FragDetails = () => {
         <p className={style.name}>{frag.name}</p>
         <hr />
         <p className={style.price}>€{frag.prices[clickedButtonIndex]?.price}</p>
-        <hr />
+        <hr className={style['price-divider']} />
         <div className={style['btn-wrapper']}>
           {frag.prices.map((price, index) => (
             <button
@@ -66,7 +66,12 @@ const FragDetails = () => {
           ))}
         </div>
 
-        <Button colorScheme="gray" leftIcon={<FaCartShopping />}>
+        <Button
+          colorScheme="gray"
+          w="300px"
+          leftIcon={<FaCartShopping />}
+          alignSelf="center"
+        >
           Add to cart
         </Button>
 

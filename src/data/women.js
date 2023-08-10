@@ -1,5 +1,6 @@
 import LaVieEstBelle from '../assets/fragrances/womens/la_vie_est_belle.png';
 import ch_good_girl from '../assets/fragrances/womens/ch_gg.png';
+import ange_ou_demon from '../assets/fragrances/womens/givenchy_aud.png';
 
 
 const women = [
@@ -62,6 +63,33 @@ const women = [
             {
                 bottle_size: "150ml",
                 price: 158.5
+            }
+        ]
+    },
+    {
+        id: 'givenchy_ange_ou_demon',
+        name: 'Ange ou Démon',
+        brand: 'Givenchy',
+        image: ange_ou_demon,
+        gender: "women",
+        notes: {
+            top: [ "Saffron", "Thyme", "Mandarin Orange" ],
+            middle: [ "Lily", "Ylang-Ylang", "Orchid" ],
+            base: [ "Vanilla", "Tonka Bean", "Oakmoss", "Brazilian Rosewood" ]
+        },
+        perfumers: [ "Jean-Pierre Bethouart", "Olivier Cresp" ],
+        prices: [
+            {
+                bottle_size: "30ml",
+                price: 55.0
+            },
+            {
+                bottle_size: "50ml",
+                price: 81.0
+            },
+            {
+                bottle_size: "100ml",
+                price: 102.0
             }
         ]
     }
