@@ -3,6 +3,7 @@ import FragCard from '../components/FragCard';
 import { allFragrances } from '../data/constants';
 import style from '../styles/FragGallery.module.css';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Banner from '../components/Banner';
 
 const FragGallery = ({ categoryType, title }) => {
   const [category, setCategory] = useState(allFragrances);
@@ -38,7 +39,7 @@ const FragGallery = ({ categoryType, title }) => {
 
   return (
     <div>
-      <div className={style.banner}>{title}</div>
+      <Banner title={title} />
       <div className={style.wrapper}>
         <Breadcrumbs />
         <div className={style.grid}>
