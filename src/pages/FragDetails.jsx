@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { allFragrances } from '../data/constants';
 import style from '../styles/FragDetails.module.css';
 import FragAccordion from '../components/FragAccordion';
-import { Button } from '@chakra-ui/react';
+import { Button, useMediaQuery } from '@chakra-ui/react';
 import { FaCartShopping } from 'react-icons/fa6';
 
 const emptyFrag = {
@@ -24,6 +24,7 @@ const FragDetails = () => {
   const { id } = useParams();
   const [frag, setFrag] = useState(emptyFrag);
   const [clickedButtonIndex, setClickedButtonIndex] = useState(0);
+  const [sm] = useMediaQuery('(max-width: 730px)');
 
   useEffect(() => {
     const target = allFragrances.find((p) => p.id === id);
@@ -70,7 +71,7 @@ const FragDetails = () => {
           colorScheme="gray"
           w="300px"
           leftIcon={<FaCartShopping />}
-          alignSelf="center"
+          alignSelf={sm ? 'center' : 'initial'}
         >
           Add to cart
         </Button>

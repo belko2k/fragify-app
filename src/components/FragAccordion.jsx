@@ -9,7 +9,7 @@ import {
 
 const FragAccordion = ({ frag, style }) => {
   return (
-    <Accordion allowMultiple mt="10">
+    <Accordion allowMultiple mt="10" w="300px">
       <AccordionItem>
         <h2>
           <AccordionButton>
