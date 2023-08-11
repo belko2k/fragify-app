@@ -7,9 +7,9 @@ import {
   Box,
 } from '@chakra-ui/react';
 
-const FragAccordion = ({ frag, style }) => {
+const FragAccordion = ({ frag, style, w }) => {
   return (
-    <Accordion allowMultiple mt="10" w="300px">
+    <Accordion allowMultiple mt="10" style={{ width: w }}>
       <AccordionItem>
         <h2>
           <AccordionButton>

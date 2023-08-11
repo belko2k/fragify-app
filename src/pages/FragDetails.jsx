@@ -5,6 +5,7 @@ import style from '../styles/FragDetails.module.css';
 import FragAccordion from '../components/FragAccordion';
 import { Button, useMediaQuery } from '@chakra-ui/react';
 import { FaCartShopping } from 'react-icons/fa6';
+import AmountInput from '../components/AmountInput';
 // import Banner from '../components/Banner';
 
 const emptyFrag = {
@@ -25,7 +26,8 @@ const FragDetails = () => {
   const { id } = useParams();
   const [frag, setFrag] = useState(emptyFrag);
   const [clickedButtonIndex, setClickedButtonIndex] = useState(0);
-  const [sm] = useMediaQuery('(max-width: 730px)');
+  const [m] = useMediaQuery('(max-width: 800px)');
+  const [sm] = useMediaQuery('(max-width: 440px)');
 
   useEffect(() => {
     const target = allFragrances.find((p) => p.id === id);
@@ -71,15 +73,19 @@ const FragDetails = () => {
               </button>
             ))}
           </div>
-          <Button
-            colorScheme="gray"
-            w="300px"
-            leftIcon={<FaCartShopping />}
-            alignSelf={sm ? 'center' : 'initial'}
-          >
-            Add to cart
-          </Button>
-          <FragAccordion frag={frag} style={style} />
+          <div className={style['add-to-cart']}>
+            <AmountInput />
+            <Button
+              bg="blackAlpha.700"
+              color="white"
+              w="100%"
+              leftIcon={<FaCartShopping />}
+              alignSelf={m ? 'center' : 'initial'}
+            >
+              Add to cart
+            </Button>
+          </div>
+          <FragAccordion frag={frag} style={style} w={sm ? '300px' : '400px'} />
         </div>
       </div>
     </div>

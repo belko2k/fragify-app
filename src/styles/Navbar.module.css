@@ -13,8 +13,7 @@
   font-family: 'Cinzel', serif;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover {
   border-bottom: 1px solid black;
   margin-top: -1px;
 }
