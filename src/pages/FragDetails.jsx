@@ -56,7 +56,7 @@ const FragDetails = () => {
         <div className={style['right-col']}>
           <p className={style.brand}>{frag.brand}</p>
           <p className={style.name}>{frag.name}</p>
-          <hr />
+          <hr className={style.divider} />
           <p className={style.price}>
             €{frag.prices[clickedButtonIndex]?.price}
           </p>

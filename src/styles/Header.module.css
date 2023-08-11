@@ -9,3 +9,8 @@
 .logo {
   width: 16rem;
 }
+
+.logo:hover {
+  scale: 1.05;
+  transition: 300ms linear;
+}
