@@ -1,6 +1,6 @@
 import style from '../styles/Banner.module.css';
 
-const Banner = ({title}) => {
+const Banner = ({ title }) => {
   return <div className={style.banner}>{title}</div>;
 };
 

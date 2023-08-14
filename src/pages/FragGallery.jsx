@@ -34,8 +34,14 @@ const FragGallery = ({ categoryType, title }) => {
   }, [categoryType]);
 
   useEffect(() => {
-    document.title = `${categoryType} | Fragify`;
-  }, [categoryType]);
+    let pageTitle = 'Fragrances';
+
+    if (categoryType !== 'allFragrances') {
+      pageTitle = `${categoryType}`;
+    }
+
+    document.title = pageTitle + ' | Fragify';
+  }, [categoryType, title]);
 
   return (
     <div>
