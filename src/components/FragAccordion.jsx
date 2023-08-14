@@ -45,11 +45,13 @@ const FragAccordion = ({ frag, style, w }) => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          {frag.perfumers.map((p, index) => (
-            <li key={index} className={style['perfumers-list']}>
-              {p}
-            </li>
-          ))}
+          <ul style={{ display: 'block' }}>
+            {frag.perfumers.map((p, index) => (
+              <li key={index} className={style['perfumers-list']}>
+                {p}
+              </li>
+            ))}
+          </ul>
         </AccordionPanel>
       </AccordionItem>
     </Accordion>

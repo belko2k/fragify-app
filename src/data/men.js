@@ -2,6 +2,7 @@ import dhi from '../assets/fragrances/mens/dior_homme_int.png';
 import ysl_lhomme from '../assets/fragrances/mens/ysl_lhomme.png';
 import light_blue_int from '../assets/fragrances/mens/light_blue_int.png';
 import ahs from '../assets/fragrances/mens/ahs.png';
+import the_one_edp from '../assets/fragrances/mens/the_one_edp.png';
 
 const men = [
     {
@@ -113,6 +114,33 @@ const men = [
             {
                 bottle_size: "150ml",
                 price: 145.0
+            }
+        ]
+    },
+    {
+        id: 'd&g_the_one_edp',
+        name: "The One EDP",
+        brand: 'Dolce&Gabbana',
+        image: the_one_edp,
+        gender: "men",
+        notes: {
+            top: [ "Grapefruit", "Coriander", "Basil" ],
+            middle: [ "Cardamom", "Ginger", "Orange Blossom" ],
+            base: [ "Tobacco", "Amber", "Cedar" ]
+        },
+        perfumers: [ "Olivier Polge" ],
+        prices: [
+            {
+                bottle_size: "50ml",
+                price: 81.0
+            },
+            {
+                bottle_size: "100ml",
+                price: 117.0
+            },
+            {
+                bottle_size: "150ml",
+                price: 131.0
             }
         ]
     }
