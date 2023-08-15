@@ -1,6 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import Banner from '../components/Banner';
 import { useState } from 'react';
+import Breadcrumbs from '../components/Breadcrumbs';
+import style from '../styles/FragLayout.module.css';
 
 const FragLayout = () => {
   const [bannerContent, setBannerContent] = useState({
@@ -13,16 +15,16 @@ const FragLayout = () => {
   };
 
   return (
-    <div className="frag-layout">
+    <main>
       <Banner content={bannerContent} />
-      <main className="products">
-        <div className="products-sorter">
-          <label htmlFor="product-sort" className="products-sorter__label">
+      <div className={style.flex}>
+        <Breadcrumbs />
+        <div>
+          <label htmlFor="product-sort">
             Sort By:
             <select
               name="productSortOrder"
               id="product-sort"
-              className="products-sorter__selection"
               defaultValue="recommended"
               onChange={handleFragranceSort}
             >
@@ -34,16 +36,14 @@ const FragLayout = () => {
             </select>
           </label>
         </div>
-        <section className="products-display">
-          <Outlet
-            context={{
-              setBannerContent,
-              fragranceSort,
-            }}
-          />
-        </section>
-      </main>
-    </div>
+      </div>
+      <Outlet
+        context={{
+          setBannerContent,
+          fragranceSort,
+        }}
+      />
+    </main>
   );
 };
 

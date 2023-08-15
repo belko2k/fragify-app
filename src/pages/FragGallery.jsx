@@ -7,7 +7,6 @@ import {
   womenCategoryData,
 } from '../data/fragCategoryData';
 import style from '../styles/FragGallery.module.css';
-import Breadcrumbs from '../components/Breadcrumbs';
 import { useOutletContext } from 'react-router-dom';
 
 const FragGallery = ({ categoryType }) => {
@@ -69,7 +68,6 @@ const FragGallery = ({ categoryType }) => {
   return (
     <div>
       <div className={style.wrapper}>
-        <Breadcrumbs />
         <div className={style.grid}>
           {currentFrags.map((frag) => {
             return <FragCard key={frag.id} content={frag} />;

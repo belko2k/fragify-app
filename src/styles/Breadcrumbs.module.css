@@ -1,13 +1,10 @@
 .breadcrumbs {
-  margin: 1.25rem;
-  padding-left: 1rem;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
   width: fit-content;
   position: relative;
   border-radius: 0.25rem;
-  margin-top: 1rem;
 }
 .crumb {
   transition: all 0.2s ease-in-out;
@@ -56,7 +53,6 @@
   display: none;
 }
 
-/*** hover breadcrumbs ***/
 .crumb:hover {
   background-color: #f9f9f9;
 }
@@ -69,4 +65,10 @@
 
 .crumb:first-child:hover {
   background-color: rgba(84, 84, 84, 0.15);
+}
+
+@media (max-width: 550px) {
+  .breadcrumbs {
+    display: none;
+  }
 }
