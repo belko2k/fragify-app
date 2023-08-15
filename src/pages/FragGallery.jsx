@@ -36,8 +36,6 @@ const FragGallery = ({ categoryType }) => {
 
   const sortedFragData = sortFragrances(category.fragrances, fragranceSort);
 
-  const currentFrags = sortedFragData;
-
   useEffect(() => {
     switch (categoryType) {
       case 'allFragrances': {
@@ -58,18 +56,15 @@ const FragGallery = ({ categoryType }) => {
   }, [categoryType]);
 
   useEffect(() => {
-    document.title = `${category.documentTitle}`;
-  }, [category]);
-
-  useEffect(() => {
-    setBannerContent(() => category.banner);
+    document.title = category.documentTitle;
+    setBannerContent(category.banner);
   }, [category, setBannerContent]);
 
   return (
     <div>
       <div className={style.wrapper}>
         <div className={style.grid}>
-          {currentFrags.map((frag) => {
+          {sortedFragData.map((frag) => {
             return <FragCard key={frag.id} content={frag} />;
           })}
         </div>
