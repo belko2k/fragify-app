@@ -13,7 +13,7 @@ const FooterNav = () => {
             <Link to="/">About Us</Link>
           </li>
           <li>
-            <Link to="/">Careeres</Link>
+            <Link to="/">Contact Us</Link>
           </li>
         </div>
         <div className="right-list">

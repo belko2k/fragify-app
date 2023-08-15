@@ -1,31 +1,56 @@
 import { useEffect, useState } from 'react';
 import FragCard from '../components/FragCard';
 import { allFragrances } from '../data/constants';
+import {
+  allFragranceCategoryData,
+  menCategoryData,
+  womenCategoryData,
+} from '../data/fragCategoryData';
 import style from '../styles/FragGallery.module.css';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Banner from '../components/Banner';
+import { useOutletContext } from 'react-router-dom';
 
-const FragGallery = ({ categoryType, title }) => {
-  const [category, setCategory] = useState(allFragrances);
+const FragGallery = ({ categoryType }) => {
+  const [category, setCategory] = useState(allFragranceCategoryData);
+  const { setBannerContent, fragranceSort } = useOutletContext();
+
+  const sortFragrances = (fragrances, sortType) => {
+    switch (sortType) {
+      case 'recommended':
+        return fragrances;
+      case 'alphabetical-ascending':
+        return fragrances.slice().sort((a, b) => a.name.localeCompare(b.name));
+      case 'alphabetical-descending':
+        return fragrances.slice().sort((a, b) => b.name.localeCompare(a.name));
+      case 'price-ascending':
+        return fragrances
+          .slice()
+          .sort((a, b) => a.prices[0].price - b.prices[0].price);
+      case 'price-descending':
+        return fragrances
+          .slice()
+          .sort((a, b) => b.prices[0].price - a.prices[0].price);
+      default:
+        return fragrances;
+    }
+  };
+
+  const sortedFragData = sortFragrances(category.fragrances, fragranceSort);
+
+  const currentFrags = sortedFragData;
 
   useEffect(() => {
     switch (categoryType) {
       case 'allFragrances': {
-        setCategory(allFragrances);
+        setCategory(allFragranceCategoryData);
         break;
       }
       case 'men': {
-        const men = allFragrances.filter(
-          (fragrance) => fragrance.gender === 'men'
-        );
-        setCategory(men);
+        setCategory(menCategoryData);
         break;
       }
       case 'women': {
-        const women = allFragrances.filter(
-          (fragrance) => fragrance.gender === 'women'
-        );
-        setCategory(women);
+        setCategory(womenCategoryData);
         break;
       }
       default:
@@ -34,22 +59,19 @@ const FragGallery = ({ categoryType, title }) => {
   }, [categoryType]);
 
   useEffect(() => {
-    let pageTitle = 'Fragrances';
+    document.title = `${category.documentTitle}`;
+  }, [category]);
 
-    if (categoryType !== 'allFragrances') {
-      pageTitle = `${categoryType}`;
-    }
-
-    document.title = pageTitle + ' | Fragify';
-  }, [categoryType, title]);
+  useEffect(() => {
+    setBannerContent(() => category.banner);
+  }, [category, setBannerContent]);
 
   return (
     <div>
-      <Banner title={title} />
       <div className={style.wrapper}>
         <Breadcrumbs />
         <div className={style.grid}>
-          {category.map((frag) => {
+          {currentFrags.map((frag) => {
             return <FragCard key={frag.id} content={frag} />;
           })}
         </div>
