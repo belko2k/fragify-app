@@ -10,9 +10,9 @@ const Header = () => {
       <button>
         <BsList size={42} />
       </button>
-      {/* <Link to="/"> */}
-      <img className={styles.logo} src={logo} alt="fragify logo" />
-      {/* </Link> */}
+      <Link to="/">
+        <img className={styles.logo} src={logo} alt="fragify logo" />
+      </Link>
       <Navbar />
     </header>
   );

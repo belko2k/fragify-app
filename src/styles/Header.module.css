@@ -24,9 +24,12 @@ button {
     flex-direction: row;
   }
 
+  a {
+    margin-right: auto;
+  }
+
   .logo {
     width: 10rem;
-    margin-right: auto;
   }
 
   button {
