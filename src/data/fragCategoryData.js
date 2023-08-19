@@ -5,7 +5,7 @@ import women from "./women";
 export const allFragranceCategoryData = {
     documentTitle: 'Shop all fragrances | FRAGIFY',
     banner: {
-        title: 'All Fragrances'
+        title: 'ALL'
     },
     fragrances: allFragrances
 };

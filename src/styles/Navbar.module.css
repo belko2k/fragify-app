@@ -18,10 +18,6 @@
 
 @media (max-width: 600px) {
   .navbar {
-    gap: 1.5rem;
-  }
-
-  .navbar a {
-    font-size: 1.1rem;
+    display: none;
   }
 }

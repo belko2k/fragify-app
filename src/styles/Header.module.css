@@ -14,3 +14,23 @@
   scale: 1.05;
   transition: 300ms linear;
 }
+
+button {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .logo {
+    width: 10rem;
+    margin-right: auto;
+  }
+
+  button {
+    display: block;
+    margin-right: auto;
+  }
+}

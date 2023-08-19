@@ -5,3 +5,10 @@
   font-size: 3rem;
   padding: 1rem;
 }
+
+@media (max-width: 600px) {
+  .banner {
+    font-size: 2rem;
+    padding: 0.7rem;
+  }
+}

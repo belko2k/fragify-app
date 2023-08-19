@@ -2,13 +2,17 @@ import Navbar from './Navbar';
 import styles from '../styles/Header.module.css';
 import logo from '../assets/logo-black.png';
 import { Link } from 'react-router-dom';
+import { BsList } from 'react-icons/bs';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Link to="/">
-        <img className={styles.logo} src={logo} alt="logo" />
-      </Link>
+      <button>
+        <BsList size={42} />
+      </button>
+      {/* <Link to="/"> */}
+      <img className={styles.logo} src={logo} alt="fragify logo" />
+      {/* </Link> */}
       <Navbar />
     </header>
   );

@@ -3,6 +3,7 @@ import ysl_lhomme from '../assets/fragrances/mens/ysl_lhomme.png';
 import light_blue_int from '../assets/fragrances/mens/light_blue_int.png';
 import ahs from '../assets/fragrances/mens/ahs.png';
 import the_one_edp from '../assets/fragrances/mens/the_one_edp.png';
+import bdc_edp from '../assets/fragrances/mens/bdc_edp.png';
 
 const men = [
     {
@@ -141,6 +142,33 @@ const men = [
             {
                 bottle_size: "150ml",
                 price: 131.0
+            }
+        ]
+    },
+    {
+        id: 'chanel_bleu_de_chanel_edp',
+        name: "Bleu de Chanel",
+        brand: 'Chanel',
+        image: bdc_edp,
+        gender: "men",
+        notes: {
+            top: [ "Grapefruit", "Coriander", "Lemon", "Mint", "Pink Pepper", "Bergamot" ],
+            middle: [ "Ginger", "Nutmeg", "Jasmine", "Melon" ],
+            base: [ "Sandalwood", "Amber", "Cedar", "Patchouli" ]
+        },
+        perfumers: [ "Jacques Polge" ],
+        prices: [
+            {
+                bottle_size: "50ml",
+                price: 125.0
+            },
+            {
+                bottle_size: "100ml",
+                price: 150.0
+            },
+            {
+                bottle_size: "150ml",
+                price: 184.0
             }
         ]
     }
