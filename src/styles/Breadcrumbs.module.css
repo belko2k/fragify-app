@@ -67,7 +67,7 @@
   background-color: rgba(84, 84, 84, 0.15);
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .breadcrumbs {
     display: none;
   }

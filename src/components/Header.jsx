@@ -7,7 +7,7 @@ import { BsList } from 'react-icons/bs';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <button>
+      <button className={styles['menu-btn']}>
         <BsList size={42} />
       </button>
       <Link to="/">

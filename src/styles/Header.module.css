@@ -15,7 +15,7 @@
   transition: 300ms linear;
 }
 
-button {
+.menu-btn {
   display: none;
 }
 
@@ -24,7 +24,7 @@ button {
     flex-direction: row;
   }
 
-  a {
+  .header a {
     margin-right: auto;
   }
 
@@ -32,7 +32,7 @@ button {
     width: 10rem;
   }
 
-  button {
+  .menu-btn {
     display: block;
     margin-right: auto;
   }

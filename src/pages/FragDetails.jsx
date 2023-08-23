@@ -6,7 +6,6 @@ import FragAccordion from '../components/FragAccordion';
 import { Button, useMediaQuery } from '@chakra-ui/react';
 import { FaCartShopping } from 'react-icons/fa6';
 import AmountInput from '../components/AmountInput';
-// import Banner from '../components/Banner';
 
 const emptyFrag = {
   id: '',
@@ -48,7 +47,6 @@ const FragDetails = () => {
 
   return (
     <div>
-      {/* <Banner title={frag.name} /> */}
       <div className={style['even-columns']}>
         <div className={style['left-col']}>
           <img className={style['frag-img']} src={frag.image} alt={frag.name} />

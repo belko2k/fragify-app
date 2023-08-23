@@ -6,9 +6,3 @@
   padding: 1rem 2rem;
   align-items: center;
 }
-
-@media (max-width: 550px) {
-  .flex {
-    justify-content: center;
-  }
-}
