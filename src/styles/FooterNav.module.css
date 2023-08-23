@@ -1,10 +1,10 @@
-ul {
+.footer-nav {
   display: flex;
   gap: 4rem;
   list-style: none;
 }
 
-li {
+.footer-nav li {
   line-height: 3;
   opacity: 0.8;
 }

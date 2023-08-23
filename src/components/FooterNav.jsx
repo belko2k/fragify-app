@@ -3,8 +3,12 @@ import styles from '../styles/FooterNav.module.css';
 
 const FooterNav = () => {
   return (
-    <nav className={styles['footer-nav']}>
-      <ul aria-label="Footer Navigation" role="list">
+    <nav>
+      <ul
+        aria-label="Footer Navigation"
+        role="list"
+        className={styles['footer-nav']}
+      >
         <div className="left-list">
           <li>
             <Link to="/">Home</Link>

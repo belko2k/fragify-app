@@ -1,10 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ isExpanded }) => {
   return (
     <nav>
-      <ul className={styles.navbar}>
+      <ul
+        id="primary-navigation"
+        data-visible={isExpanded ? 'false' : 'true'}
+        className={styles.navbar}
+      >
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
