@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/FragCard.module.css';
 
-const FragCard = (props) => {
-  const { content } = props;
-
+const FragCard = ({ content }) => {
   return (
     <Link to={`/fragrances/${content.gender}/${content.id}`}>
       <div className={styles['card']}>
