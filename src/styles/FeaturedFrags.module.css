@@ -3,6 +3,13 @@
   margin-inline: auto;
 }
 
+.featured-title {
+  font-size: 2rem;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  padding-block: 2rem 0.5rem;
+}
+
 .grid {
   padding: 4rem 2rem;
   display: grid;
