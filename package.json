@@ -1,6 +1,7 @@
 {
   "name": "fragify",
   "private": true,
+  "homepage": "https://belko2k.github.io/fragify-app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
